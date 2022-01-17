@@ -11,13 +11,25 @@ namespace practiceScoreCard
         {
              Console.WriteLine("Welcome to the Hartwell Rd. Archery Shoot!");
              Scorecard a = new Scorecard();
-             Console.WriteLine("How many people are shooting through?");
-             int answer1 = Convert.ToInt32(Console.ReadLine());
+             int answer1 = NumShooters();
              string answer2 = "test";
+             
              string result = a.GetScorecardDetails(answer1, answer2);
              Console.WriteLine(result);
              Console.WriteLine("Press Enter Key to Exit..");
              Console.ReadLine();
+        }
+
+        private static int NumShooters()
+        {
+            Console.WriteLine("How many people are shooting through?");
+            var shooters = Convert.ToInt32(Console.ReadLine());
+            return shooters;
+        }
+
+        public static void Main()
+        {
+            StartGame();
         }
 
         class Scorecard
@@ -35,10 +47,6 @@ namespace practiceScoreCard
                 else return info; 
                         
             }
-        }
-        public static void Main()
-        {
-            StartGame();
         }
     }
 }

@@ -1,0 +1,6 @@
+/Users/stefanshaffer/Documents/stefans_repos/archeryscorecard/obj/Debug/practicescorecard.csproj.AssemblyReference.cache
+/Users/stefanshaffer/Documents/stefans_repos/archeryscorecard/obj/Debug/practicescorecard.csproj.CoreCompileInputs.cache
+/Users/stefanshaffer/Documents/stefans_repos/archeryscorecard/bin/Debug/practicescorecard.exe
+/Users/stefanshaffer/Documents/stefans_repos/archeryscorecard/bin/Debug/practicescorecard.pdb
+/Users/stefanshaffer/Documents/stefans_repos/archeryscorecard/obj/Debug/practicescorecard.exe
+/Users/stefanshaffer/Documents/stefans_repos/archeryscorecard/obj/Debug/practicescorecard.pdb
