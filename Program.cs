@@ -1,6 +1,4 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections;
 
 namespace practiceScoreCard
 {
@@ -10,6 +8,8 @@ namespace practiceScoreCard
         public static void StartGame()
         {
              Console.WriteLine("Welcome to the Hartwell Rd. Archery Shoot!");
+             card b = new card();
+             Console.WriteLine(b.scorekeeper);
              Scorecard a = new Scorecard();
              int answer1 = NumShooters();
              string answer2 = "test";
