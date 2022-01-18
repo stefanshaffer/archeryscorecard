@@ -9,15 +9,23 @@ namespace practiceScoreCard
         {
              Console.WriteLine("Welcome to the Hartwell Rd. Archery Shoot!");
              card b = new card();
-             Console.WriteLine(b.scorekeeper);
+             b.scorekeeper = GetScorekeeper();
              Scorecard a = new Scorecard();
-             int answer1 = NumShooters();
-             string answer2 = "test";
-             
-             string result = a.GetScorecardDetails(answer1, answer2);
+             b.shootertotal = NumShooters();
+
+             string result = a.GetScorecardDetails(b.shootertotal, b.scorekeeper);
              Console.WriteLine(result);
              Console.WriteLine("Press Enter Key to Exit..");
              Console.ReadLine();
+        }
+
+        public static string GetScorekeeper()
+        {
+            Console.WriteLine("Who is keeping score?");
+            string keeper = Console.ReadLine();
+            return keeper;
+            
+            
         }
 
         private static int NumShooters()
@@ -34,9 +42,9 @@ namespace practiceScoreCard
 
         class Scorecard
         {
-            public string GetScorecardDetails(int numofshooters , string shooterlist )
+            public string GetScorecardDetails(int numofshooters , string keeper )
             {
-                string info = string.Format( "Number of shooters: {0} \nNames of shooters: {1} ", numofshooters , shooterlist);
+                string info = string.Format( "Number of shooters: {0} \nScorekeeper: {1} ", numofshooters , keeper);
                 if (numofshooters > 4)
                 {
                     Console.WriteLine("That's too many shooters.  Try again");
