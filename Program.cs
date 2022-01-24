@@ -5,9 +5,12 @@ namespace practiceScoreCard
 
     public static class Game
     {
+        private static string _shooter;
+
         public static void StartGame()
         {
              Console.WriteLine("Welcome to the Hartwell Rd. Archery Shoot!");
+             PrintShooters();
              card b = new card();
              b.scorekeeper = GetScorekeeper();
              Scorecard a = new Scorecard();
@@ -35,6 +38,23 @@ namespace practiceScoreCard
             return shooters;
         }
 
+        public static void PrintShooters()
+        {
+            string[] shooterlist = new string[NumShooters()];
+            for (int i = 0; i < shooterlist.Length; i++)
+            {
+                Console.WriteLine("Who is the index :" + " " + i.ToString());
+                shooterlist[i] = Console.ReadLine();
+            }
+
+            foreach (var shooter     in shooterlist)
+            {
+                Console.WriteLine(shooter);
+            }
+
+
+        }
+
         public static void Main()
         {
             StartGame();
@@ -58,19 +78,3 @@ namespace practiceScoreCard
         }
     }
 }
-
-/*class Program
-{
-    static void Main(string[] args)
-    {
-        Program p = new Program();
-        string result = p.GetUserDetails("Suresh Dasari", 31);
-        Console.WriteLine(result);
-        Console.WriteLine("Press Enter Key to Exit..");
-        Console.ReadLine();
-    }
-    public string GetUserDetails(string name, int age)
-    {
-        string info = string.Format("Name: {0}, Age: {1}", name, age);
-        return info;
-    }*/
